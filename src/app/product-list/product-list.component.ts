@@ -1,0 +1,77 @@
+import { Component, OnChanges } from '@angular/core';
+import { Product } from '../_datatype.types';
+
+@Component({
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
+})
+export class ProductListComponent {
+  selectedProduct!:Product;
+  
+  
+  products : Product[] = [
+    {
+      id:1,
+      name:'Iphone 15',
+      description: 'This is new iphone',
+      brand:'apple',
+      gender: 'all',
+      category: 'Phone',
+      colors:['green', 'red'],
+      price:58000,
+      is_in_inventory:true,
+      items_left:10,
+      imageURL: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PlikkE9n64_sXNep5k1YOAHaHa%26pid%3DApi&f=1&ipt=6054aa1ab36fefccd55a64e8eee0da518859c3bd020e710d85088f03271e598a&ipo=images',
+      slug: 'Apple-Iphone-15'
+    },
+   
+    {
+      id:2,
+      name:'Dell Laptop',
+      description: 'This is new iphone',
+      brand:'Dell',
+      gender: 'All',
+      category: 'Electronics',
+      colors:['black', 'grey'],
+      price:58000,
+      is_in_inventory:true,
+      items_left:10,
+      imageURL: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.d8Xow2XpRSLqyhJwyaE9tQHaHa%26pid%3DApi&f=1&ipt=f20f9ec9a9adc1c5d4c556cf57105cb272be809e5dca60ea2b540a3904ee12d0&ipo=images',
+      slug: 'dell-laptop-15'
+    },
+    {
+      id:3,
+      name:'Moto G42',
+      description: 'This is phone',
+      brand:'apple',
+      gender: 'all',
+      category: 'Phone',
+      colors:['green', 'red'],
+      price:11000,
+      is_in_inventory:false,
+      items_left:10,
+      imageURL: 'data:image/jpeg;base64,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',
+      slug: 'Apple-Iphone-15'
+    }
+  ]
+  totalProdCount:number = this.products.length;
+  totalProdInStock:number = this.products.filter( p => p.is_in_inventory).length;
+  totalProdOutOfStock:number = this.products.filter( p => !p.is_in_inventory).length;
+
+  selectedFilter : string = 'all';
+
+  filterChanged(event:string){
+    this.selectedFilter = event;
+    
+  }
+
+
+  clickedProduct(product:Product){
+    this.selectedProduct = product;
+
+    console.log(this.selectedProduct);
+    
+  }
+  
+}

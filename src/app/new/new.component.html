@@ -1,0 +1,13 @@
+<ng-container *ngIf="showContent; else toggleOff">
+    <h2>This is heading of toggle on</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque possimus voluptate quos perspiciatis illum, quod
+        corporis magnam ducimus sed hic minima qui. Recusandae, aliquid mollitia.</p>
+</ng-container>
+
+<ng-template #toggleOff>
+    <h2>This is heading of toggle off</h2>
+    <p>adipisicing elit. Cumques perspiciatis illum, quod
+        corporis magnam ducimus sed hic minima qui. Recusandae, aliquid mollitia.</p>
+</ng-template>
+
+<button (click)="toggle()">toggle</button>
