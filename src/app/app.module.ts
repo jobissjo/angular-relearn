@@ -13,6 +13,7 @@ import { FilterComponent } from './filter/filter.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { NewComponent } from './new/new.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeaturedBrandsComponent } from './featured-brands/featured-brands.compo
     FilterComponent,
     ProductDetailsComponent,
     NewComponent,
-    FeaturedBrandsComponent
+    FeaturedBrandsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
