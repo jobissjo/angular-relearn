@@ -14,6 +14,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { NewComponent } from './new/new.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
 import { TestComponent } from './test/test.component';
+import { SetBackgroundDirective } from './customDirectives/setBackground.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TestComponent } from './test/test.component';
     ProductDetailsComponent,
     NewComponent,
     FeaturedBrandsComponent,
-    TestComponent
+    TestComponent,
+    SetBackgroundDirective
   ],
   imports: [
     BrowserModule,
