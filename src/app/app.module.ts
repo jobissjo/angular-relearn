@@ -15,6 +15,8 @@ import { NewComponent } from './new/new.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
 import { TestComponent } from './test/test.component';
 import { SetBackgroundDirective } from './customDirectives/setBackground.directive';
+import { HighlightDirective } from './customDirectives/highlight.directive';
+import { HoverDirective } from './customDirectives/hover.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SetBackgroundDirective } from './customDirectives/setBackground.directi
     NewComponent,
     FeaturedBrandsComponent,
     TestComponent,
-    SetBackgroundDirective
+    SetBackgroundDirective,
+    HighlightDirective,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
