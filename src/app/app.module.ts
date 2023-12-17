@@ -17,6 +17,7 @@ import { TestComponent } from './test/test.component';
 import { SetBackgroundDirective } from './customDirectives/setBackground.directive';
 import { HighlightDirective } from './customDirectives/highlight.directive';
 import { HoverDirective } from './customDirectives/hover.directive';
+import { DisableProductDirective } from './customDirectives/disable-product.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HoverDirective } from './customDirectives/hover.directive';
     TestComponent,
     SetBackgroundDirective,
     HighlightDirective,
-    HoverDirective
+    HoverDirective,
+    DisableProductDirective
   ],
   imports: [
     BrowserModule,
